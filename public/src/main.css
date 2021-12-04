@@ -1,0 +1,137 @@
+body{
+    margin: 0%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nubes . options"
+      "menu menu menu";
+    background: black;
+
+  }
+  
+    .menu { 
+      grid-area: menu;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu li{
+        display:inline;
+        padding-left:3px;
+        padding-right:3px;
+        color: white;
+    }
+        .menu li a{
+            text-decoration: none;
+            cursor: cell;
+            color: white;
+        }
+  
+  .options { 
+        grid-area: options; 
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+  
+  .nubes { 
+        grid-area: nubes; 
+    }
+
+.terminal-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 500px 100px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". . ."
+    ". terminal ."
+    ". . .";
+}
+
+    .terminal {
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr;
+    grid-template-rows: 0.1fr 3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "controls ."
+        "prompt prompt";
+    grid-area: terminal;
+    background: gray;
+    border-radius: 10px;
+}
+
+    .controls { 
+        grid-area: controls; 
+        display: grid;
+        grid-template-columns: 25px 25px 25px;
+        grid-template-areas: "circle-red circle-yellow circle-green";
+        padding: 15px;
+        }
+        #circle-red{
+            grid-area: circle-red;
+            width: 15px;
+            height: 15px;
+            border-radius: 25px;
+            background: red;
+        }
+
+        #circle-yellow{
+            grid-area: circle-yellow;
+            width: 15px;
+            height: 15px;
+            border-radius: 25px;
+            background: yellow;
+        }
+        
+        #circle-green{
+            grid-area: circle-green;
+            width: 15px;
+            height: 15px;
+            border-radius: 25px;
+            background: green;
+        }
+    .prompt { 
+        grid-area: prompt; 
+        background: black;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        display: flex;
+        flex-direction: column;
+    }
+        .prompt input{
+            padding-left: 20px;
+            background: none;
+            border: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .prompt input:focus{
+            outline: none;
+        }
+        .prompt input::placeholder {
+            color: white;
+            font-size:small;
+        }
+        .prompt p{
+            padding-left: 20px;
+        }
+        .command{
+            color: white;
+        }
+        .path{
+            color: blue;
+        }
+        .repo{
+            color: green;
+        }
