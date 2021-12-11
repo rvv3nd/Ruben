@@ -1,53 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Ruben-Home Page</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <title>Ruben-Home Page</title>
+    </head>
+    <body>
 
-    <nav>
-        <div class="container">
-            <div class="menu">
+        <nav>
+            <div class="container">
+                <div class="menu">
+                    <ol>
+                        <li><a href="https://www.linkedin.com/in/ruben-padilla-814634204">Join my network</a></li>
+                        <li>|</li>
+                        <li><a href="">Proyects</a></li>
+                        <li>|</li>  
+                        <li><a href="https://github.com/rvv3nd">GitHub</a></li>
+                        <li>|</li>  
+                        <li><a href="#contact">Contact</a></li>
+                    </ol>
+                </div>
+                <div class="options">
+                    <a href="">settings</a>
+                </div>
+                <div class="nubes">
+                    <p>nubes</p>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </nav>
+
+        <section class="terminal-section">
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="controls">
+                        <div id="circle-red"></div>
+                        <div id="circle-yellow"></div>
+                        <div id="circle-green"></div>
+                    </div>
+                    <div class="prompt">
+                        <p class="path">/rvv3nd.github/home-page</p>
+                        <form id="first_terminal_form" action="">
+                            <label for=""><p class="command">> run hello.world ? [y/n]</p></label>
+                            <input id="first_command_input" type="text" placeholder=">" >>
+                        </form>
+                        <form id="terminal_form" action="">
+                            <div id="output_console" >
+                                <!-- Espacio donde se agregaran los outpus del comando -->
+                            </div>
+                            <input id="command_input" type="text" placeholder=">" >>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+    <footer>
+        <div class="main-area">
+            <div class="icons-tech">
                 <ol>
-                    <li><a href="https://www.linkedin.com/in/ruben-padilla-814634204">Join my network</a></li>
-                    <li>|</li>
-                    <li><a href="">Proyectos</a></li>
-                    <li>|</li>  
-                    <li><a href="https://github.com/rvv3nd">GitHub</a></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Html5_dise%C3%B1o_web.png" alt=""></li>
+                    <li><img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" alt=""></li>
+                    <li><img src="https://www.lifepng.com/wp-content/uploads/2020/06/js-icon-png.png" alt=""></li>
+                    <li><img src="https://i.stack.imgur.com/C9301.png" alt=""></li>
+                    <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAi68fw3hBkE6l-vGLWYB9aRoSV5DWJ0zKJtAzpjYTMD83DwP5WU4D1N7eHx1ucPcZle8&usqp=CAU" alt=""></li>
+                    <li><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" alt=""></li>
                 </ol>
             </div>
-            <div class="options">
-                <a href="">settings</a>
-            </div>
-            <div class="nubes">
-                <p>nubes</p>
-                <img src="" alt="">
-            </div>
-          </div>
-    </nav>
-
-    <section class="terminal-section">
-        <div class="terminal-container">
-            <div class="terminal">
-              <div class="controls">
-                  <div id="circle-red"></div>
-                  <div id="circle-yellow"></div>
-                  <div id="circle-green"></div>
-                </div>
-              <div class="prompt">
-                  <p class="path">/rvv3nd.github/home-page</p>
-                  <form action="">
-                      <label for=""><p class="command">>run hello.world ?</p></label>
-                      <input type="text" onsubmit="" placeholder="[y/n]">
-                  </form>
-              </div>
+            <div>
+                <ol id="contact">
+                    <li><a href="https://www.buymeacoffee.com/ruben.idk">Buy Me a Coffe</a></li>
+                    <li><a href="https://msng.link/o/?@rubenidk=tg">Telegram me</a></li>
+                    <li><a href="mailto:yorubenyo@gmail.com">Mail To Me</a></li>
+                </ol>
             </div>
         </div>
-    </section>
-    
-</body>
+    </footer>
+
 </html>

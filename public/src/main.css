@@ -1,18 +1,16 @@
 body{
     margin: 0%;
+    height: 100%;
 }
-
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "nubes . options"
-      "menu menu menu";
+      "nubes menu options";
     background: black;
-
   }
   
     .menu { 
@@ -20,6 +18,10 @@ body{
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0;
+    }
+    .menu ol{
+        padding-left: 0px;
     }
     .menu li{
         display:inline;
@@ -33,28 +35,28 @@ body{
             color: white;
         }
   
-  .options { 
+    .options { 
         grid-area: options; 
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
     }
   
-  .nubes { 
+    .nubes { 
         grid-area: nubes; 
     }
 
 .terminal-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 100px 500px 100px;
+    grid-template-rows: 100px 420px 100px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
     ". . ."
     ". terminal ."
     ". . .";
-}
+    }
 
     .terminal {
     display: grid;
@@ -68,7 +70,7 @@ body{
     grid-area: terminal;
     background: gray;
     border-radius: 10px;
-}
+    }
 
     .controls { 
         grid-area: controls; 
@@ -82,7 +84,11 @@ body{
             width: 15px;
             height: 15px;
             border-radius: 25px;
-            background: red;
+            background: #f8524e;
+
+        }
+        #circle-red:hover{
+            opacity: .6;
         }
 
         #circle-yellow{
@@ -90,16 +96,25 @@ body{
             width: 15px;
             height: 15px;
             border-radius: 25px;
-            background: yellow;
+            background: #fabd2e;
+
         }
-        
+        #circle-yellow:hover{
+            opacity: .6;
+        }
+
         #circle-green{
             grid-area: circle-green;
             width: 15px;
             height: 15px;
             border-radius: 25px;
-            background: green;
+            background: #30c941;
+
         }
+        #circle-green:hover{
+            opacity: .6;
+        }
+
     .prompt { 
         grid-area: prompt; 
         background: black;
@@ -135,3 +150,45 @@ body{
         .repo{
             color: green;
         }
+    #output_console{
+        color: white;
+    }
+
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:"main-area";
+    background: black;
+    color: white;
+    }
+
+    footer a{
+        text-decoration: none;
+        cursor: cell;
+        color: white;
+    }
+    
+    .main-area { 
+        grid-area: main-area; 
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .main-area li{
+            display:inline;
+            padding-left:30px;
+            padding-right:30px;
+            color: white;
+        }
+            
+
+
+    .icons-tech img{
+        width: 80px;
+        height: 80px;
+    }
