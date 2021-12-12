@@ -70,6 +70,9 @@ body{
     grid-area: terminal;
     background: gray;
     border-radius: 10px;
+    position: relative;
+    top: 0;
+    height: 30rem;
     }
 
     .controls { 
@@ -119,6 +122,7 @@ body{
         grid-area: prompt; 
         background: black;
         border-radius: 10px;
+        overflow: auto;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         display: flex;
@@ -153,10 +157,243 @@ body{
     #output_console{
         color: white;
     }
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "top"
+        "center"
+        "bottom";
+    }
+    
+    .center {
+        display: grid; 
+        grid-template-columns: 1.2fr 1.5fr 1.2fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "experiencia foto center-right"; 
+        grid-area: center; 
+    }
+    
+    .foto { 
+        grid-area: foto; 
+        display: grid;
+        place-items: center;
+    }
+    #my_pic{
+        width: 21.875rem;
+        height: 19.375rem;
 
+        border-radius: 1rem;
+    }
+
+    .experiencia { 
+        grid-area: experiencia; 
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+    }
+    h2{
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 500;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+    #experience_icon{
+        width: 4rem;
+        height: 4rem;
+        margin-left: 2rem;
+    }
+    .experiencia p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .center-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "formacion formacion formacion";
+    grid-area: center-right;
+    }
+    
+    .formacion { 
+        grid-area: formacion; 
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+    }
+    .formacion h2{
+        margin: 0;
+    }
+    .formacion ul{
+        margin-top: 0;
+    }
+    .formacion li{
+        margin: 2rem;
+    }
+    .formacion p{
+        margin: 0;
+        padding: 0;
+    }
+    #degree_icon{
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    
+    .top {
+    display: grid;
+    grid-template-columns: 0.9fr 0.6fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nombre direccion bio";
+    grid-area: top;
+    }
+    
+    .nombre { 
+        grid-area: nombre;
+        text-align: center; 
+    }
+    .nombre p{
+        margin: 0;
+    }
+    .nombre #nombre{
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 300;
+        font-size: 4.375rem;
+    }
+    .nombre #apellido{
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 600;
+        font-size: 5rem;
+    }
+    .sub_title{
+        font-size: 1rem;
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 300;
+
+    }
+    .title{
+        font-size: 1.5rem;
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 500;
+
+    }
+    .direccion { 
+        grid-area: direccion; 
+        display: grid;
+        place-items: center;
+    }
+    .direccion p{
+        margin: 0;
+        text-align: center;
+    }
+    .direccion i{
+        display: grid;
+        justify-content: center;
+    }
+
+    #residence_icon{
+        width: 3.375rem;
+        height: 4.438rem;
+        padding: .3rem;
+
+    }
+    
+    .bio { 
+        grid-area: bio; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    #profile_icon{
+        width: 4rem;
+        height: 4rem;
+        padding: .3rem;
+    }
+
+    
+    .bottom {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "habilidades interes contacto";
+    grid-area: bottom;
+    }
+    
+    .habilidades { 
+        grid-area: habilidades; 
+    }
+
+    .barra{
+        margin-left: 3rem;
+        width: 70%;
+        height: 1.5rem;
+        background: gray;
+        margin-top: 1.5rem;
+    }
+
+    .habilidad{
+        margin-left: 1rem;
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        color: white;
+    }
+
+    #ES{
+        height: 100%;
+        width: 99%;
+        background-color: black;
+    }
+    #EN{
+        height: 100%;
+        width: 70%;
+        background-color: black;
+    }
+    #FR{
+        height: 100%;
+        width: 15%;
+        background-color: black;
+    }
+    .interes { 
+        grid-area: interes; 
+        text-align: center;
+    }
+    
+    .contacto { 
+        grid-area: contacto; 
+        display: flex;
+        flex-direction: row;
+    }
+        .contacto a{
+            text-decoration: none;
+            cursor: cell;
+            color: black;
+        }
+      
 
 footer {
     display: grid;
+    position: relative;
+    top:100%;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -175,8 +412,7 @@ footer {
     .main-area { 
         grid-area: main-area; 
         text-align: center;
-        align-items: center;
-        justify-content: center;
+
     }
 
         .main-area li{

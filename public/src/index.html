@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;700&display=swap');</style>
         <link rel="stylesheet" href="main.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/086f947000.js" crossorigin="anonymous"></script>
         <script src="main.js"></script>
         <title>Ruben-Home Page</title>
     </head>
@@ -15,13 +17,13 @@
             <div class="container">
                 <div class="menu">
                     <ol>
-                        <li><a href="https://www.linkedin.com/in/ruben-padilla-814634204">Join my network</a></li>
+                        <li><a href="https://www.linkedin.com/in/ruben-padilla-814634204">Linkedin</a></li>
                         <li>|</li>
-                        <li><a href="">Proyects</a></li>
+                        <li><a href="">Proyectos</a></li>
                         <li>|</li>  
                         <li><a href="https://github.com/rvv3nd">GitHub</a></li>
                         <li>|</li>  
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact">Contacto</a></li>
                     </ol>
                 </div>
                 <div class="options">
@@ -34,6 +36,91 @@
             </div>
         </nav>
 
+        <div class="presentacion">
+            <div class="center">
+              <div class="foto">
+                  <img id="my_pic" src="./img/me.jpg" alt="">
+              </div>
+              <div class="experiencia">
+                  <img id="experience_icon"src="./img/experience.png" alt="">
+                  <div>
+                      <h2>Experiencia Laboral</h2>
+                      <ul>
+                        <li>
+                            <p class="title">2016-2017 Técnico </p><p class="sub_title">Trantor, CDMX</p>
+                            <br>
+                            <p class="sub_title">Mantenimiento preventivo y correctivo a los equipos de cómputo de los principales bancos del área metropolitana del valle de México</p>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="center-right">
+                <div class="formacion">
+                    <img id="degree_icon" src="./img/degree.webp" alt="">
+                    <h2>Formación</h2>
+                    <ul>
+                        <li><p class="title">2013-2016 Técnico en programación</p> <p class="sub_title">CBTis 03, Tlaxcala</p></li>
+                        <li><p class="title">2017-2022 Licenciatura en Ciencias de la Computación</p> <p class="sub_title">Benemerita Universidad Autonoma de Puebla</p></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="top">
+              <div class="nombre">
+                  <p id="nombre">Rubén</p>
+                  <p id="apellido">Padilla</p>
+              </div>
+              <div class="direccion">
+                <img id="residence_icon" src="./img/residence.png" alt="">
+                <p class="sub_title">Residencia actual:</p>
+                <p class="title">Puebla, Puebla</p>
+              </div>
+              <div class="bio">
+                <img id="profile_icon" src="./img/profile.png" alt="">
+                <p class="sub_title">Originario de la ciudad de Tlaxcala. Crecí rodeado de naturaleza, tengo cuatro mascotas; dos perros y dos gatos.</p>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="habilidades">
+                    <h2>Skills</h2>
+                    <div class="barra">
+                        <div id="ES">
+                            <p class="habilidad">Español</p>
+                        </div>
+                    </div>
+                    <div class="barra">
+                        <div id="EN">
+                            <p class="habilidad">Inglés</p>
+                        </div>
+                    </div>
+                    <div class="barra">
+                        <div id="FR">
+                            <p class="habilidad">Francés</p>
+                        </div>
+                    </div>
+              </div>
+              <div class="interes">
+                  <h2>Hobbies</h2>
+                  <div class="interes_images">
+                    <img src="./img/playing.png" alt="">
+                    <img src="./img/running.png" alt="">
+                    <img src="./img/music.png" alt="">
+                    <img src="./img/soccer.png" alt="">
+                    <img src="./img/bong.png" alt="">
+                  </div>
+              </div>
+              <div class="contacto">
+                <div>
+                    <img src="./img/contact.png" alt="">
+                </div>
+                  <ul>
+                    <li><a href="tel:5577511502">Tel: 01 55 77 511 502</a></li>
+                    <li><a href="mailto:yorubenyo@gmail.com">Mail: yorubenyo@gmal.com</a></li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+
         <section class="terminal-section">
             <div class="terminal-container">
                 <div class="terminal">
@@ -45,7 +132,7 @@
                     <div class="prompt">
                         <p class="path">/rvv3nd.github/home-page</p>
                         <form id="first_terminal_form" action="">
-                            <label for=""><p class="command">> run hello.world ? [y/n]</p></label>
+                            <label for=""><p class="command">> run know.me ? [y/n]</p></label>
                             <input id="first_command_input" type="text" placeholder=">" >>
                         </form>
                         <form id="terminal_form" action="">
@@ -77,7 +164,7 @@
                 <ol id="contact">
                     <li><a href="https://www.buymeacoffee.com/ruben.idk">Buy Me a Coffe</a></li>
                     <li><a href="https://msng.link/o/?@rubenidk=tg">Telegram me</a></li>
-                    <li><a href="mailto:yorubenyo@gmail.com">Mail To Me</a></li>
+                    <li><a href="mailto:yorubenyo@gmail.com">Mail To Me</a></li>                
                 </ol>
             </div>
         </div>
