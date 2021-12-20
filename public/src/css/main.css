@@ -160,7 +160,7 @@ body{
 .presentacion {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 25% 50% 25%;
     gap: 0px 0px;
     overflow-x: auto;
     grid-auto-flow: row;
@@ -172,7 +172,7 @@ body{
     
     .center {
         display: grid; 
-        grid-template-columns: 1.2fr 1.5fr 1.2fr; 
+        grid-template-columns: 1fr 1fr 1fr; 
         grid-template-rows: 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
@@ -183,13 +183,17 @@ body{
     .foto { 
         grid-area: foto; 
         display: grid;
-        place-items: center;
+        justify-content: center;
+    }
+    .foto:hover{
+        border-right: .1rem solid black;
+        border-left: .1rem solid black;
+        border-top: .1rem solid black;
+        border-bottom: .1rem solid black;
     }
     #my_pic{
-        width: 21.875rem;
-        height: 19.375rem;
-
-        border-radius: 1rem;
+        border-radius: 5rem;
+        margin-top: 3rem;
     }
 
     .experiencia { 
@@ -198,6 +202,12 @@ body{
         display: flex;
         flex-direction: row;
     }
+
+    .experiencia:hover{
+        border-right: .1rem solid black;
+        border-bottom: .1rem solid black;
+    }
+
     h2{
         font-family: 'Chakra Petch', sans-serif;
         font-weight: 500;
@@ -205,6 +215,7 @@ body{
         margin-left: 1rem;
         margin-top: 0;
     }
+    
     #experience_icon{
         width: 4rem;
         height: 4rem;
@@ -213,6 +224,9 @@ body{
     .experiencia p{
         margin: 0;
         padding: 0;
+    }
+    .experiencia li{
+        margin-top: 1rem;
     }
     
     .center-right {
@@ -231,6 +245,10 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center ;
+    }
+    .formacion:hover{
+        border-left: .1rem solid black;
+        border-bottom: .1rem solid black;
     }
     .formacion h2{
         margin: 0;
@@ -253,8 +271,8 @@ body{
     
     .top {
     display: grid;
-    grid-template-columns: 0.9fr 0.6fr 1.5fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 0.5fr 1.5fr;
+    grid-template-rows: .5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -265,6 +283,10 @@ body{
     .nombre { 
         grid-area: nombre;
         text-align: center; 
+    }
+    .nombre:hover{
+        border-right: .1rem solid black;
+        border-bottom: .1rem solid black;
     }
     .nombre p{
         margin: 0;
@@ -296,6 +318,10 @@ body{
         display: grid;
         place-items: center;
     }
+    .direccion:hover{
+        border-right: .1rem solid black;
+        border-bottom: .1rem solid black;
+    }
     .direccion p{
         margin: 0;
         text-align: center;
@@ -319,6 +345,10 @@ body{
         justify-content: center;
         margin: 20px;
     }
+    .bio:hover{
+        border-left: .1rem solid black;
+        border-bottom: .1rem solid black;
+    }
 
     #profile_icon{
         width: 4rem;
@@ -329,19 +359,22 @@ body{
     
     .bottom {
     display: grid;
-    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    grid-template-columns: 1.2fr 1fr 0.9fr 0.9fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "habilidades interes contacto";
+        "habilidades tecnologias interes contacto";
     grid-area: bottom;
     }
     
     .habilidades { 
         grid-area: habilidades; 
     }
-
+    .habilidades:hover{
+        border-right: .1rem solid black;
+        border-top: .1rem solid black;
+    }
     .barra{
         margin-left: 3rem;
         width: 70%;
@@ -373,15 +406,42 @@ body{
         width: 10%;
         background-color: black;
     }
+
+    .tecnologias{
+        grid-area: tecnologias;
+    }
+    .tecnologias:hover{
+        border-right: .1rem solid black;
+        border-top: .1rem solid black;
+    }
+    .tecnologias-elements{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .tech_elemet_icon{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
     .interes { 
         grid-area: interes; 
         text-align: center;
     }
-    
+    .interes:hover{
+        border-left: .1rem solid black;
+        border-top: .1rem solid black;
+    }
     .contacto { 
         grid-area: contacto; 
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+    }
+    .contacto:hover{
+        border-left: .1rem solid black;
+        border-top: .1rem solid black;
     }
         .contacto a{
             text-decoration: none;
@@ -390,42 +450,3 @@ body{
         }
       
 
-footer {
-    display: grid;
-    position: relative;
-    top:100%;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:"main-area";
-    background: black;
-    color: white;
-    }
-
-    footer a{
-        text-decoration: none;
-        cursor: cell;
-        color: white;
-    }
-    
-    .main-area { 
-        grid-area: main-area; 
-        text-align: center;
-
-    }
-
-        .main-area li{
-            display:inline;
-            padding-left:30px;
-            padding-right:30px;
-            color: white;
-        }
-            
-
-
-    .icons-tech img{
-        width: 80px;
-        height: 80px;
-    }

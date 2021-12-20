@@ -1,0 +1,32 @@
+h1{
+    margin-left: 2rem;
+    padding: 2rem;
+}
+
+.nav-bar-proyectos{
+    background: black;
+    width: 100%;
+    margin: 0;
+    color: lightslategray;
+}
+.nav-bar-proyectos a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background: rgb(60, 60, 60);
+    /* background-image: url("bg-01-slow.gif");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.col{
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.card{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
