@@ -2,6 +2,10 @@ body{
     margin: 0%;
     height: 100%;
 }
+nav{
+    margin: 0;
+    width: 100%;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -12,7 +16,13 @@ body{
       "nubes menu options";
     background: black;
   }
-  
+
+  .container .btn{
+      color: white;
+  }
+  .container .btn:hover{
+      color: white;
+  }
     .menu { 
       grid-area: menu;
       display: flex;
@@ -448,5 +458,3 @@ body{
             cursor: cell;
             color: black;
         }
-      
-

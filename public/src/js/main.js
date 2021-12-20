@@ -33,7 +33,8 @@ $(function(){
         $("#command_input").val('')
 
         switch(command_given){
-        case 'know me':
+        
+        case 'run know me': case 'know me':
             $('#first_terminal_form').hide()
             $('.terminal-section').hide()
             $(".presentacion").show()
@@ -58,6 +59,29 @@ $(function(){
                 '<input type="text" placeholder="password">'
             )
             break;
+        case 'run': case 'show':
+            $("#output_console").append(
+                '<p>... what?</p>'
+            )
+            break;
+        case 'show proyects':
+            $("#output_console").append(
+                '<p>opening...</p>'
+            )
+            window.open('./proyectos.html'); 
+            break;
+        case 'ls':
+                $("#output_console").append(
+                    '<p>.</p>',
+                    '<p>.gitignore</p>',
+                    '<p>index.html</p>',
+                    '<p>proyectos.html</p>',
+                    '<p>css</p>',
+                    '<p>js</p>',
+                    '<p>img</p>',
+                    '<p>config.json</p>'
+                )
+                break;
         default : 
             $("#output_console").append(
             '<p>Command not found</p>'

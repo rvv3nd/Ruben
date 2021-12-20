@@ -7,13 +7,23 @@ h1{
     background: black;
     width: 100%;
     margin: 0;
-    color: lightslategray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .nav-bar-proyectos a{
     text-decoration: none;
     color: white;
 }
-
+.dropdown-menu{
+    background-color: #484646;
+}
+.dropdown .btn{
+    color: lightslategray;
+}
+.dropdown .btn:hover{
+    color: lightslategray;
+}
 body{
     background: rgb(60, 60, 60);
     /* background-image: url("bg-01-slow.gif");
