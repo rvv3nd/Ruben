@@ -58,6 +58,10 @@ $(function(){
                 switchFunction()
                 break;
             case 'n': case 'no' : case 'nah': case 'nel':
+                let elemento = document.getElementById("output_console");
+                while (elemento.firstChild) {
+                    elemento.removeChild(elemento.firstChild);
+                }
                 $("#output_console").append('<p class="path">/rvv3nd.github/home-page</p>')
                 $('#first_terminal_form').hide()
                 $("#terminal_form").show()
