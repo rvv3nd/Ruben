@@ -41,8 +41,16 @@ nav{
     }
         .menu li a{
             text-decoration: none;
-            cursor: cell;
+            cursor: none;
             color: white;
+        }
+        .menu li a:hover{
+            transition: .55s;
+            font-size: larger;
+            border:.1rem solid white;
+            padding: .3rem;
+            padding-left: .6rem;
+            padding-right: .6rem;
         }
   
     .options { 
@@ -53,7 +61,18 @@ nav{
     }
   
     .nubes { 
-        grid-area: nubes; 
+        grid-area: nubes;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 12.5rem;
+        height: 4.938rem;
+    }
+
+    #open4jobimg{
+        width: 100%;
+        height: 100%;
+        margin: 0;
     }
 
 .terminal-container {
@@ -128,6 +147,11 @@ nav{
             opacity: .6;
         }
 
+    #countdown{
+        width:2rem;
+        padding: 0;
+        text-align: center;
+    }
     .prompt { 
         grid-area: prompt; 
         background: black;
@@ -153,6 +177,9 @@ nav{
             font-size:small;
         }
         .prompt p{
+            padding-left: 20px;
+        }
+        .prompt li{
             padding-left: 20px;
         }
         .command{
@@ -211,6 +238,8 @@ nav{
         margin-top: 2rem;
         display: flex;
         flex-direction: row;
+        max-height: 100%;
+        overflow-y: auto;
     }
 
     .experiencia:hover{
@@ -286,15 +315,20 @@ nav{
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "nombre direccion bio";
+        "flag_n_name direccion bio";
     grid-area: top;
     }
-    
+    .flag_n_name{
+        grid-area: flag_n_name;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
     .nombre { 
-        grid-area: nombre;
         text-align: center; 
     }
-    .nombre:hover{
+    .flag_n_name:hover{
         border-right: .1rem solid black;
         border-bottom: .1rem solid black;
     }
@@ -311,6 +345,12 @@ nav{
         font-weight: 600;
         font-size: 5rem;
     }
+
+    #my_flag{
+        width: 10rem;
+        height: 10rem;
+    }
+
     .sub_title{
         font-size: 1rem;
         font-family: 'Chakra Petch', sans-serif;
@@ -443,6 +483,11 @@ nav{
     .interes:hover{
         border-left: .1rem solid black;
         border-top: .1rem solid black;
+    }
+    .interes_images{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .contacto { 
         grid-area: contacto; 

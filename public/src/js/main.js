@@ -1,3 +1,50 @@
+let counter = 5;
+let timeout;
+let timer_on = 0;
+
+function timedCount() {
+    document.getElementById("countdown").value = counter;
+    counter--;
+    if(counter <=0){
+        switchFunction()
+        stopCount()
+    }else timeout = setTimeout(timedCount, 1000);
+}
+
+function startCount() {
+  if (!timer_on) {
+    timer_on = 1;
+    timedCount();
+  }
+}
+
+function stopCount() {
+  clearTimeout(timeout);
+  document.getElementById("countdown").value = ""
+  timer_on = 0;
+}
+
+
+function home(){
+    $('#first_terminal_form').show()
+    let elemento = document.getElementById("output_console");
+        while (elemento.firstChild) {
+            elemento.removeChild(elemento.firstChild);
+        }
+    $('.terminal-section').show()
+    $(".presentacion").hide()
+    counter = 10
+    timer_on = 0;
+    startCount()
+}
+
+function switchFunction() {
+    $('#first_terminal_form').hide()
+    $('.terminal-section').hide()
+    $(".presentacion").show()
+    counter = 10
+}
+
 $(function(){
     $("#terminal_form").hide()
     $(".presentacion").hide()
@@ -8,14 +55,9 @@ $(function(){
         
         switch (command_given){
             case 'y': case 'yes': case 'yeah':case 'yep':
-                $('#first_terminal_form').hide()
-                $('.terminal-section').hide()
-                $(".presentacion").show()
+                switchFunction()
                 break;
             case 'n': case 'no' : case 'nah': case 'nel':
-                $("#output_console").append(
-                    '<p> Dijo que no </p>'
-                )
                 $("#output_console").append('<p class="path">/rvv3nd.github/home-page</p>')
                 $('#first_terminal_form').hide()
                 $("#terminal_form").show()
@@ -33,7 +75,12 @@ $(function(){
         $("#command_input").val('')
 
         switch(command_given){
-        
+        case 'clear':
+            let elemento = document.getElementById("output_console");
+            while (elemento.firstChild) {
+                elemento.removeChild(elemento.firstChild);
+            }
+            break;
         case 'run know me': case 'know me':
             $('#first_terminal_form').hide()
             $('.terminal-section').hide()
@@ -41,45 +88,59 @@ $(function(){
             break;
         case 'ipconfig':
             $("#output_console").append(
+                '<p>'+command_given+'</p>',
                 '<p> Nice try bro </p>'
             )
             break;
         case 'man':
             $("#output_console").append(
+                '<p>'+command_given+'</p>',
                 '<p> Showing info... </p>'
+            )
+        case '-h': case 'help': case '--help':
+            $("#output_console").append(
+                '<p> To know me run: know me </p>',
+                '<p> To see my proyects run: show proyects </p>',
+                '<p> To have fun: try others commands ;) </p>',
             )
             break;
         case 'rm -r':
             $("#output_console").append(
+                '<p>'+command_given+'</p>',
                 '<p>Deleting info</p>'
             )
             break;
-        case 'su':
+        case 'su':case 'sudo':
             $("#output_console").append(
-                '<input type="text" placeholder="password">'
+                "<p>you need to log in as admin</p>"
             )
             break;
         case 'run': case 'show':
             $("#output_console").append(
+                '<p>'+command_given+'</p>',
                 '<p>... what?</p>'
             )
             break;
         case 'show proyects':
             $("#output_console").append(
+                '<p>'+command_given+'</p>',
                 '<p>opening...</p>'
             )
             window.open('./proyectos.html'); 
             break;
         case 'ls':
                 $("#output_console").append(
-                    '<p>.</p>',
-                    '<p>.gitignore</p>',
-                    '<p>index.html</p>',
-                    '<p>proyectos.html</p>',
-                    '<p>css</p>',
-                    '<p>js</p>',
-                    '<p>img</p>',
-                    '<p>config.json</p>'
+                    '<p>'+command_given+'</p>',
+                    '<ul>',
+                        '<li>.</li>',
+                        '<li>.gitignore</li>',
+                        '<li>index.html</li>',
+                        '<li>proyectos.html</li>',
+                        '<li>css</li>',
+                        '<li>js</li>',
+                        '<li>img</li>',
+                        '<li>config.json</li>',
+                    '</ul>'
                 )
                 break;
         default : 
@@ -91,5 +152,6 @@ $(function(){
         $(".prompt").scrollTop($(".prompt").prop('scrollHeight'))
     })
 
+    startCount()
 
 })

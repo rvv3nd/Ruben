@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "postcss-cli": "^9.1.0",
+    "postcss-nesting": "^10.0.3"
+  }
 }

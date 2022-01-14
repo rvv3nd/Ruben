@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/icon.jpg">
         <link href='https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;700&display=swap' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="./css/main.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -41,9 +42,8 @@
                         </ul>
                       </div>
                 </div>
-                <div class="nubes">
-                    <p>nubes</p>
-                    <img src="" alt="">
+                <div onclick="home()" class="nubes">
+                    <img id="open4jobimg" src="./img/open4job.jpg" alt="">
                 </div>
             </div>
         </nav>
@@ -86,10 +86,13 @@
               </div>
             </div>
             <div class="top">
-              <div class="nombre">
-                  <p id="nombre">Rubén</p>
-                  <p id="apellido">Padilla</p>
-              </div>
+                <div class="flag_n_name">
+                    <div class="nombre">
+                        <p id="nombre">Rubén</p>
+                        <p id="apellido">Padilla</p>
+                    </div>
+                    <img id="my_flag" src="img/mexico-3447815_1280.png" alt="">
+                </div>
               <div class="direccion">
                 <img id="residence_icon" src="./img/residence.png" alt="">
                 <p class="sub_title">Residencia actual:</p>
@@ -97,7 +100,12 @@
               </div>
               <div class="bio">
                 <img id="profile_icon" src="./img/profile.png" alt="">
-                <p class="sub_title">Originario de la ciudad de Tlaxcala. Crecí rodeado de naturaleza, tengo cuatro mascotas; dos perros y dos gatos.</p>
+                <p class="sub_title">
+                    Originario de la ciudad de Tlaxcala. Crecí rodeado de naturaleza, tengo cuatro mascotas; dos perros y dos gatos. <br>
+                    Desde pequeño me apasionaba el mundo de la informática, además, me gusta la historia, la geografía, la fisica, las matematicas y las bellas artes. <br>
+                    Me considero responsable y honesto, capaz de idear soluciones o encontrarlas en stackoverflow. 
+
+                </p>
               </div>
             </div>
             <div class="bottom">
@@ -150,17 +158,34 @@
                     </div>
                 </div>
             </div>
-              <div class="interes">
-                  <h2>Hobbies</h2>
-                  <div class="interes_images">
-                    <img src="./img/playing.png" alt="">
-                    <img src="./img/running.png" alt="">
-                    <img src="./img/music.png" alt="">
-                    <img src="./img/soccer.png" alt="">
-                    <img src="./img/bong.png" alt="">
-                  </div>
-              </div>
-              <div class="contacto">
+            <div class="interes">
+                <h2>Hobbies</h2>
+                <div class="interes_images">
+                    <div>
+                        <img src="./img/playing.png" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/running.png" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/music.png" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/soccer.png" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/bong.png" alt="">
+                    </div>
+                    <div>
+                        <img src="./img/hiking.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <img src="./img/bike.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="contacto">
                 <div>
                     <img src="./img/contact.png" alt="">
                 </div>
@@ -183,14 +208,14 @@
                     <div class="prompt">
                         <p class="path">/rvv3nd.github/home-page</p>
                         <form id="first_terminal_form" action="">
-                            <label for=""><p class="command">> run know.me ? [y/n]</p></label>
-                            <input id="first_command_input" type="text" placeholder=">" >>
+                            <label for=""><p class="command">> run know.me ? [y/n] <output type="text" id="countdown"></p></label>
+                            <input id="first_command_input" onfocus="stopCount()" type="text" placeholder=">" >
                         </form>
                         <form id="terminal_form" action="">
-                            <div id="output_console" >
+                            <div id="output_console">
                                 <!-- Espacio donde se agregaran los outpus del comando -->
                             </div>
-                            <input id="command_input" type="text" placeholder=">" >>
+                            <input id="command_input" onfocus="stopCount()" type="text" placeholder=">" >
                         </form>
                     </div>
                 </div>
