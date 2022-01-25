@@ -46,6 +46,10 @@ function switchFunction() {
 }
 
 $(function(){
+    if (window.innerWidth < 830 || screen.width < 830){
+        console.log("cambio!")
+        document.getElementById("mi_foto").style.display = "none";
+    }
     $("#terminal_form").hide()
     $(".presentacion").hide()
     $('#first_terminal_form').submit(e => {
